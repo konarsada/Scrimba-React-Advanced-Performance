@@ -1,3 +1,3 @@
 Two Branches
-Master Branch - shouldComponentUpdate() lifecycle method and React.PureComponent
-React.memo() - React.memo() hook
+master branch - shouldComponentUpdate() lifecycle method and React.PureComponent
+react.memo() branch - React.memo() hook
