@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from "react"
+import GrandParent from "./components/GrandParent"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    state = { count: 0 }
+    
+    increment = () => this.setState(prevState => ({count: prevState.count + 1}))
+    
+    render() {
+        console.log("[GP] [P] [C] [GC] APP just rendered")
+        return (
+            <div>
+                <button onClick={this.increment}>+1</button>
+                <h2>{this.state.count}</h2>
+                <p>I'm the App component</p>
+                <GrandParent />
+                <GrandParent count={this.state.count} />
+            </div>
+        )    
+    }
 }
 
-export default App;
+export default App
